@@ -1,3 +1,11 @@
+// Terrystan N. Sustal - Journal Assignment
+// Show creativity to exceed requirements:
+// One creativity that I tried to accomplish is to ask the user for his/her goal
+// for the current day. I gave an option to the user to select "Goal" on
+// "else if (userSelection == 2)". This thought came into my mind because
+// I remember I would always set goals in my journal so that I have something
+// that I can try to accomplish throughout the day.
+
 using System;
 using System.IO; 
 
@@ -7,7 +15,7 @@ class Program
     {
         // Open the Journal.cs Class and set it to a currentJournal variable
         Journal currentJournal = new Journal();
-        string start = "y";
+        string start = "Y";
 
         // Create instances for promptForUser
         // Add the promptForUser in the _prompt List
@@ -29,7 +37,7 @@ class Program
         Console.Write("Would you like to continue to the main menu? Y/N: ");
         Console.ReadLine();
 
-        if (start.ToUpper() == "Y")
+        if (start == "Y")
         {
             int userSelection = 0;
 
@@ -44,6 +52,7 @@ class Program
                 Console.WriteLine("5. Save");
                 Console.WriteLine("6. Quit");
                 userSelection = int.Parse(Console.ReadLine());
+                Console.WriteLine();
                 
                 if (userSelection == 1)
                 {
@@ -73,9 +82,7 @@ class Program
                     Console.WriteLine("What are your goals for today? (ex: My goals for today (1/1/23) are...)");
 
                     currentGoal._userGoal = Console.ReadLine();
-
                     currentJournal._entries.Add(currentGoal);
-    
                 }
 
                 else if (userSelection == 3)
