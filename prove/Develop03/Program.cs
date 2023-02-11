@@ -8,7 +8,7 @@
 // First I made a variable called totalWordsMemorized and set it to 0.
 // Later on I called this variable in the if (userSelect == "").
 // Inside this if statement, I called the variable 3x in order to add the words that turns into an underscore
-// when the user presses "enter". So everytime the user presses enter, the totalWordsMemorized will add 3 until
+// when the user presses "enter". So every time the user presses enter, the totalWordsMemorized will add 3 until
 // the program ends. At the end of the program, I would let the user know how many words has he/she memorized.
 
 
