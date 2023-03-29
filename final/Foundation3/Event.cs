@@ -4,20 +4,21 @@ using System;
 public class Event
 {
     // Attributes for the base class
-    protected string _eventType;
-    protected string _eventTitle;
-    protected string _eventDescription;
-    protected string _date;
-    protected string _time;
-    protected string _address;
+    private string _eventType;
+    private string _eventTitle;
+    private string _eventDescription;
+    private string _date;
+    private string _time;
+    private string _address;
 
     // Set Constructors for the base class
     public Event ()
     {
     }
 
-    public Event (string eventTitle, string eventDescription, string date, string time, string address)
-    {
+    public Event (string eventType, string eventTitle, string eventDescription, string date, string time, string address)
+    {   
+        _eventType = eventTitle;
         _eventTitle = eventTitle;
         _eventDescription = eventDescription;
         _date = date;
@@ -25,20 +26,48 @@ public class Event
         _address = address;
     }
 
+    // Set Getters
+    public string GetEventType()
+    {
+        return _eventType;
+    }
+    
+    public string GetEventTitle()
+    {
+        return _eventTitle;
+    }
+    public string GetEventDescription()
+    {
+        return _eventDescription;
+    }
+
+    public string GetDate()
+    {
+        return _date;
+    }
+    public string GetTime()
+    {
+        return _time;
+    }
+    public string GetAddress()
+    {
+        return _address;
+    }
+
     public void DisplayStandardDetails()
     {
         Console.WriteLine("Standard Details:");
-        Console.WriteLine(($"Event Title: {_eventTitle}"));
-        Console.WriteLine($"Description: {_eventDescription}");
-        Console.WriteLine($"Date and time: {_date} - {_time}");
-        Console.WriteLine($"Address: {_address}");
+        Console.WriteLine(($"Event Title: {GetEventTitle()}"));
+        Console.WriteLine($"Description: {GetEventDescription()}");
+        Console.WriteLine($"Date and time: {GetDate()} - {GetTime()}");
+        Console.WriteLine($"Address: {GetAddress()}");
     }
 
     public void DisplayShortDetails()
     {
         Console.WriteLine("Short Details:");
-        Console.WriteLine($"Event Type: {_eventType}");
-        Console.WriteLine($"Title: {_eventTitle}");
-        Console.WriteLine($"Date: {_date}");
+        Console.WriteLine($"Event Type: {GetEventType()}");
+        Console.WriteLine($"Title: {GetEventTitle()}");
+        Console.WriteLine($"Date: {GetDate()}");
     }
 }

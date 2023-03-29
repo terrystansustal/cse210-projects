@@ -7,32 +7,27 @@ public class Reception : Event
     protected string _rsvpEmail;
 
     // Constructors
-    public Reception()
-    {
-        _eventType = "Reception";
-        _eventTitle = "Wedding of John and Kate";
-        _eventDescription = "He will dance";
-        _rsvpEmail = "reservespot@fakersvp.com";
-        _date = "January 05, 2023";
-        _time = "3:00PM";
-        _address = "Fake Haha USA";
-    }
-
-    public Reception (string eventTitle, string eventDescription, string date, string time, string address, string rsvpEmail) : base (eventTitle, eventDescription, date, time, address)
+    public Reception (string eventType, string eventTitle, string eventDescription, string date, string time, string address, string rsvpEmail) : base (eventType, eventTitle, eventDescription, date, time, address)
     {
         _rsvpEmail = rsvpEmail;
+    }
+
+    // Set up the Getters
+    public string GetRSVPEmail()
+    {
+        return _rsvpEmail;
     }
     
     // Methods
     public void DisplayFullDetails()
     {
         Console.WriteLine("Full Details:");
-        Console.WriteLine($"Event Type: {_eventType}");
-        Console.WriteLine(($"Event Title: {_eventTitle}"));
-        Console.WriteLine($"Description: {_eventDescription}");
-        Console.WriteLine($"Give us an email to reserve your spot! Email: {_rsvpEmail}");
-        Console.WriteLine($"Date and time: {_date} - {_time}");
-        Console.WriteLine($"Address: {_address}");
+        Console.WriteLine($"Event Type: {GetEventType()}");
+        Console.WriteLine(($"Event Title: {GetEventTitle()}"));
+        Console.WriteLine($"Description: {GetEventDescription()}");
+        Console.WriteLine($"Give us an email to reserve your spot! Email: {GetRSVPEmail()}");
+        Console.WriteLine($"Date and time: {GetDate()} - {GetTime()}");
+        Console.WriteLine($"Address: {GetAddress()}");
     }
 
     public void DisplayReception()
