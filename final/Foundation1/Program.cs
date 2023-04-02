@@ -1,3 +1,6 @@
+// Terrystan N. Sustal
+// Final Project - Program 1
+
 using System;
 using System.Collections.Generic;
 
@@ -6,7 +9,7 @@ class Program
 {
     static void Main(string[] args)
     {
-
+        // Create a list to store the videos and comments
         List<Video> videos = new List<Video>();
         // Create instances for video 1
         Video v1 = new Video();

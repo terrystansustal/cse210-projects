@@ -25,6 +25,8 @@ public class SwimmingActivity : Activity
         return numOfLaps;
     }
 
+    // Set virtual methods to override in derived classes
+
     public override double CalculateSpeed()
     {
         return GetDistance() / GetMinutes() * 60;
@@ -35,8 +37,6 @@ public class SwimmingActivity : Activity
         double pace = GetMinutes() / GetDistance() * 60;
         return pace;
     }
-
-    // Set Method
 
     public void DisplaySwimmingActivity()
     {

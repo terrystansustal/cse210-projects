@@ -10,6 +10,7 @@ public class Video
     public string _length;
     public List<Comment> _comments = new List<Comment>();
 
+    // Method
     public void DisplayVideoInfo() {
         
         Console.WriteLine($"Video title: {_title}");
@@ -19,7 +20,7 @@ public class Video
 
         Console.WriteLine("Comments below:");
 
-        foreach (Comment Comment in _comments) {
+        foreach (Comment Comment in _comments) { // For each comment in comments
             Comment.DisplayComments();
         }
     }

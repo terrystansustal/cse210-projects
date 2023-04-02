@@ -54,6 +54,8 @@ public class Event
         return _address;
     }
 
+    // Set up Methods
+
     public void DisplayStandardDetails()
     {
         Console.WriteLine("Standard Details:");

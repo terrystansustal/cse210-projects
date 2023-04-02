@@ -20,6 +20,8 @@ public class Address {
         _country = country;
     }
 
+    // Set up Getters
+
     public string GetStreetAddress()
     {
         return _streetAddress;
@@ -39,6 +41,8 @@ public class Address {
     {
         return _country;
     }
+
+    // Method
 
     public void DisplayAddress()
     {

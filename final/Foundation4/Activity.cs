@@ -22,7 +22,7 @@ public class Activity
         _distance = distance;
     }
 
-    // Getters
+    // Set up virtual Getters
     public virtual string GetActivityType()
     {
         return _activityType;
@@ -33,7 +33,6 @@ public class Activity
         return _date;
     }
 
-    // Set virtual methods to override in derived classes
     public virtual double GetDistance()
     {
         return _distance;
@@ -42,16 +41,6 @@ public class Activity
     public virtual double GetMinutes()
     {
         return _minutes;
-    }
-    
-    public virtual double CalculateSpeed()
-    {
-        return 0;
-    }
-
-    public virtual double CalculatePace()
-    {
-        return 0;
     }
 
     public string GetSummary()
@@ -65,5 +54,17 @@ public class Activity
         {
             return $"{_date} {GetActivityType()} ({_minutes} min): Distance {GetDistance()} miles, Speed {CalculateSpeed()} mph, Pace: {CalculatePace()} min per mile)";
         }
+    }
+
+    // Set virtual methods to override in derived classes
+    
+    public virtual double CalculateSpeed()
+    {
+        return 0;
+    }
+
+    public virtual double CalculatePace()
+    {
+        return 0;
     }
 }

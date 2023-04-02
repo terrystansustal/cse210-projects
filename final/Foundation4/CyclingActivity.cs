@@ -19,6 +19,8 @@ public class CyclingActivity : Activity
         return _speed;
     }
 
+    // Set up methods and override it
+
     public override double CalculateSpeed()
     {
         double speed = 60 / CalculatePace();
@@ -30,8 +32,6 @@ public class CyclingActivity : Activity
         double pace = 60.0 / GetSpeed();
         return pace;
     }
-
-    // Set Method
 
     public void DisplayCyclingActivity()
     {

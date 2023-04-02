@@ -37,7 +37,7 @@ public class Order {
         }
     }
 
-    // Getters
+    // Set up Getters
     public int GetShippingCost()
     {
         return _shippingCost;
@@ -57,10 +57,10 @@ public class Order {
         return _packingLabel;
     }
 
-    public string GetShippingLabel()
-    {
-        _shippingLabel = _customer.GetCustomerName() + "\n" + _customer.GetAddress();
-        return _shippingLabel;
+    public Customer GetShippingLabel()
+    {   
+        _customer.GetAddress();
+        return _customer;
     }
 
     // Method

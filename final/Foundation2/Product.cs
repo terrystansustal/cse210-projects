@@ -20,7 +20,7 @@ public class Product {
         _quantity = quantity;
     }
 
-    // Getters
+    // Set up Getters
 
     public string GetNameofProduct()
     {

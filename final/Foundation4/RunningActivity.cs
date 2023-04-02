@@ -9,6 +9,8 @@ public class RunningActivity : Activity
     {
     }
 
+    // Set virtual methods to override in derived classes
+
     public override double CalculateSpeed()
     {   
         double speed = GetDistance() / GetMinutes() * 60;
